@@ -12,19 +12,15 @@ sumToN(-8)  // returns null
 ***********************************************************************/
 
 
-function sumToN(sum = 0,numsB4n = 0,n) {
-  // Your code here
+function sumToN(n) {
+// if in put below zero return null
+ if(n < 0){return null};
+
+//base case
+ if(n === 0){return 0}
 
 
-  if(n < 0){return null}
-
-  if(numsB4n < n){
-
-    sum + sumToN(numsB4n+1,n)}
-
-  if(numsB4n === n){
-    return sum
-  }
+ else {return n + sumToN(n-1)}
 
 
 }

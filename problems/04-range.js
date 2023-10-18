@@ -12,7 +12,10 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  // Your code here
+// base case
+ if(start >= end){return []}
+ else { return [start,...range(start+1,end)] }
 }
 
 
